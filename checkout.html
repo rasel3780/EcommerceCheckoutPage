@@ -84,13 +84,30 @@
                         <div class="form-group">
                             <label for="payment-option">Payment Option</label>
                             <select class="form-control" id="payment-option">
-                                <option value="credit-card" selected>Credit Card</option>
-                                <option value="mobile-banking">Mobile Banking</option>
+                                <option value="mobile-banking" selected>Mobile Banking</option>
+                                <option value="credit-card" >Credit Card</option>
                                 <option value="cash-on-delivery">Cash on Delivery</option>
                             </select>
                         </div>
 
-                        <div id="credit-card-fields">
+                        <div id="mobile-banking-fields" >
+                            <div class="form-group">
+                                <label for="mobile-banking-option">Mobile Banking Option</label>
+                                <select class="form-control" id="mobile-banking-option">
+                                    <option value="bkash">bKash</option>
+                                    <option value="nagad">Nagad</option>
+                                    <option value="rocket">Rocket</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="mobile-number">Mobile Number</label>
+                                <input type="text" class="form-control" id="mobile-number"
+                                    placeholder="Enter mobile number">
+                            </div>
+                        </div>
+
+                        <div id="credit-card-fields" style="display: none;">
                             <div class="form-group">
                                 <label for="card-number">Card Number</label>
                                 <input type="text" class="form-control" id="card-number"
@@ -108,21 +125,7 @@
                             </div>
                         </div>
 
-                        <div id="mobile-banking-fields" style="display: none;">
-                            <div class="form-group">
-                                <label for="mobile-banking-option">Mobile Banking Option</label>
-                                <select class="form-control" id="mobile-banking-option">
-                                    <option value="bkash">bKash</option>
-                                    <option value="nagad">Nagad</option>
-                                    <option value="rocket">Rocket</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="mobile-number">Mobile Number</label>
-                                <input type="text" class="form-control" id="mobile-number"
-                                    placeholder="Enter mobile number">
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
 
@@ -197,27 +200,7 @@
             </div>
         </div>
     </div>
-    <script>
-
-        const paymentOption = document.getElementById('payment-option');
-        const creditCardFields = document.getElementById('credit-card-fields');
-        const mobileBankingFields = document.getElementById('mobile-banking-fields');
-
-        paymentOption.addEventListener('change', function () {
-            const selectedOption = paymentOption.value;
-
-            if (selectedOption === 'credit-card') {
-                creditCardFields.style.display = 'block';
-                mobileBankingFields.style.display = 'none';
-            } else if (selectedOption === 'mobile-banking') {
-                creditCardFields.style.display = 'none';
-                mobileBankingFields.style.display = 'block';
-            } else {
-                creditCardFields.style.display = 'none';
-                mobileBankingFields.style.display = 'none';
-            }
-        });
-    </script>
+    <script src="./js/myScript.js"></script>
 </body>
 
 </html>
