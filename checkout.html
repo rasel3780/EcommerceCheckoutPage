@@ -14,177 +14,186 @@
 <body>
 
     <div class="div" style="position: absolute; top: 0px; bottom: 0px; right: 0px; left: 0px; margin: auto;">
-    
-    <div class="page-title">
-        <h4>Checkout</h4>
-    </div>
+        <!--Header-->
+        <div class="header-container">
+            <div class="left-section">
+                <a href="#">Back to Shopping</a>
+            </div>
+            <div class="right-section">
+                <span class="cart-icon">🛒</span>
+                <span class="total-amount">BDT 351,520.00</span>
+                <span class="account-login">
+                    <a href="#">Account</a>
+                    <a href="#">Login</a>
+                </span>
+            </div>
+        </div>
 
-    <div class="container">
-        <div class="row mt-4">
-            <div class="col col-md-7">
-                <div class="card">
-                    <div class="card-header">
-                        Shipping Address
-                    </div>
-
-                    <div class="card-body">
-                        <form action="#">
-                            <div class="from-group">
-                                <label for="name">Full Name</label>
-                                <input type="text" name="cutomerName" id="cutomerName" class="form-control">
-                            </div>
-
-                            <div class="from-group">
-                                <label for="address">Address</label>
-                                <input type="text" name="address" id="address" class="form-control">
-                            </div>
-
-                            <div class="row">
-                                <div class="from-group col-md-6">
-                                    <label for="city">City</label>
-                                    <input type="city" name="city" id="city" class="form-control">
-                                </div>
-
-                                <div class="form-group col-md-4">
-                                    <label for="state">State</label>
-                                    <input type="state" name="state" id="state" class="form-control">
-                                </div>
-
-                                <div class="form-group col-md-2">
-                                    <label for="zip">Zip</label>
-                                    <input type="text" class="form-control" id="zip">
-                                </div>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-
-                <div class="card mt-2">
-                    <div class="card-header">
-                        <h5 class="mb-0">Payment</h5>
-                    </div>
-                    <div class="card-body">
-                        <div class="form-group">
-                            <label for="payment-option">Payment Option</label>
-                            <select class="form-control" id="payment-option">
-                                <option value="mobile-banking" selected>Mobile Banking</option>
-                                <option value="credit-card" >Credit Card</option>
-                                <option value="cash-on-delivery">Cash on Delivery</option>
-                            </select>
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col col-md-7">
+                    <!--Address Card-->
+                    <div class="card">
+                        <div class="card-header">
+                            Shipping Address
                         </div>
 
-                        <div id="mobile-banking-fields" >
+                        <div class="card-body">
+                            <form action="#">
+                                <div class="from-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" name="cutomerName" id="cutomerName" class="form-control">
+                                </div>
+
+                                <div class="from-group">
+                                    <label for="address">Address</label>
+                                    <input type="text" name="address" id="address" class="form-control">
+                                </div>
+
+                                <div class="row">
+                                    <div class="from-group col-md-6">
+                                        <label for="city">City</label>
+                                        <input type="city" name="city" id="city" class="form-control">
+                                    </div>
+
+                                    <div class="form-group col-md-4">
+                                        <label for="state">State</label>
+                                        <input type="state" name="state" id="state" class="form-control">
+                                    </div>
+
+                                    <div class="form-group col-md-2">
+                                        <label for="zip">Zip</label>
+                                        <input type="text" class="form-control" id="zip">
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <!--Payment Card-->
+                    <div class="card mt-2">
+                        <div class="card-header">
+                            Payment
+                        </div>
+                        <div class="card-body">
                             <div class="form-group">
-                                <label for="mobile-banking-option">Mobile Banking Option</label>
-                                <select class="form-control" id="mobile-banking-option">
-                                    <option value="bkash">bKash</option>
-                                    <option value="nagad">Nagad</option>
-                                    <option value="rocket">Rocket</option>
+                                <label for="payment-option">Payment Option</label>
+                                <select class="form-control" id="payment-option">
+                                    <option value="mobile-banking" selected>Mobile Banking</option>
+                                    <option value="credit-card">Credit Card</option>
+                                    <option value="cash-on-delivery">Cash on Delivery</option>
                                 </select>
                             </div>
-                            
-                            <div class="form-group">
-                                <label for="mobile-number">Mobile Number</label>
-                                <input type="text" class="form-control" id="mobile-number"
-                                    placeholder="Enter mobile number">
-                            </div>
-                        </div>
 
-                        <div id="credit-card-fields" style="display: none;">
-                            <div class="form-group">
-                                <label for="card-number">Card Number</label>
-                                <input type="text" class="form-control" id="card-number"
-                                    placeholder="Enter card number">
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-                                    <label for="expiry-date">Expiry Date</label>
-                                    <input type="text" class="form-control" id="expiry-date" placeholder="MM/YY">
+                            <div id="mobile-banking-fields">
+                                <div class="form-group">
+                                    <label for="mobile-banking-option">Mobile Banking Option</label>
+                                    <select class="form-control" id="mobile-banking-option">
+                                        <option value="bkash">bKash</option>
+                                        <option value="nagad">Nagad</option>
+                                        <option value="rocket">Rocket</option>
+                                    </select>
                                 </div>
-                                <div class="form-group col-md-6">
-                                    <label for="cvv">CVV</label>
-                                    <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+
+                                <div class="form-group">
+                                    <label for="mobile-number">Mobile Number</label>
+                                    <input type="text" class="form-control" id="mobile-number"
+                                        placeholder="Enter mobile number">
                                 </div>
                             </div>
-                        </div>
 
-                        
+                            <div id="credit-card-fields" style="display: none;">
+                                <div class="form-group">
+                                    <label for="card-number">Card Number</label>
+                                    <input type="text" class="form-control" id="card-number"
+                                        placeholder="Enter card number">
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="expiry-date">Expiry Date</label>
+                                        <input type="text" class="form-control" id="expiry-date" placeholder="MM/YY">
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" class="form-control" id="cvv" placeholder="Enter CVV">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
                     </div>
+
                 </div>
-
-            </div>
-
-            <div class="col-md-5">
-                <div class="card">
-                    <div class="card-header">
-                        <h5>Order Summary</h5>
+                <!--Order Summery Card-->
+                <div class="col-md-5">
+                    <div class="card">
+                        <div class="card-header">
+                            Order Summary
+                        </div>
+                        <div class="card-body">
+                            <div class="row mb-3">
+                                <div class="col-md-5">
+                                    <h6>MAC Book</h6>
+                                    <p class="text-muted">Apple Mac book pro M3, 16 GB RAM, 512 GB NVME</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Quantity</p>
+                                    <input type="number" class="form-control" value="1" min="1">
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Price</p>
+                                    <p class="fw-bold">TK.2,25999.00</p>
+                                    <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row mb-3">
+                                <div class="col-md-5">
+                                    <h6>Dell Laptop</h6>
+                                    <p class="text-muted">Dell xps, Core i5 14th Gen, 32 GB RAM, 1 TB NVME</p>
+                                </div>
+                                <div class="col-md-3">
+                                    <p>Quantity</p>
+                                    <input type="number" class="form-control" value="1" min="1">
+                                </div>
+                                <div class="col-md-4">
+                                    <p>Price</p>
+                                    <p class="fw-bold">TK.1,25500.00</p>
+                                    <button class="btn btn-danger btn-sm delete-btn">Delete</button>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p>Subtotal:</p>
+                                    <p>Discount (10%):</p>
+                                    <p>Delivery Fee:</p>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <p class="fw-bold">TK.351,499.00</p>
+                                    <p class="fw-bold text-danger">-TK.99</p>
+                                    <p class="fw-bold">TK.120.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p class="fw-bold">Total:</p>
+                                </div>
+                                <div class="col-md-6 text-end">
+                                    <p class="fw-bold">TK.351,520.00</p>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">Place
+                                    Order</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <div class="row mb-3">
-                            <div class="col-md-5">
-                                <h6>MAC Book</h6>
-                                <p class="text-muted">Apple Mac book pro M3, 16 GB RAM, 512 GB NVME</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>Quantity</p>
-                                <input type="number" class="form-control" value="1" min="1">
-                            </div>
-                            <div class="col-md-4">
-                                <p>Price</p>
-                                <p class="fw-bold">TK.2,25999.00</p>
-                                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row mb-3">
-                            <div class="col-md-5">
-                                <h6>Dell Laptop</h6>
-                                <p class="text-muted">Dell xps, Core i5 14th Gen, 32 GB RAM, 1 TB NVME</p>
-                            </div>
-                            <div class="col-md-3">
-                                <p>Quantity</p>
-                                <input type="number" class="form-control" value="1" min="1">
-                            </div>
-                            <div class="col-md-4">
-                                <p>Price</p>
-                                <p class="fw-bold">TK.1,25500.00</p>
-                                <button class="btn btn-danger btn-sm delete-btn">Delete</button>
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p>Subtotal:</p>
-                                <p>Discount (10%):</p>
-                                <p>Delivery Fee:</p>
-                            </div>
-                            <div class="col-md-6 text-end">
-                                <p class="fw-bold">TK.351,499.00</p>
-                                <p class="fw-bold text-danger">-TK.99</p>
-                                <p class="fw-bold">TK.120.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <p class="fw-bold">Total:</p>
-                            </div>
-                            <div class="col-md-6 text-end">
-                                <p class="fw-bold">TK.351,520.00</p>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-sm" style="width: 100%;">Place
-                                Order</button>
-                        </div>
-
-                    </div>
-
                 </div>
             </div>
         </div>
     </div>
-</div>
     <script src="./js/myScript.js"></script>
 </body>
 

@@ -1,5 +1,6 @@
 .card-header {
     background-color: #e0efff;
+    font-weight: 600;
 }
 
 .card-footer {
@@ -12,4 +13,43 @@
     color: #fff;
     text-align: center;
     padding: 1px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #253e58;
+}
+
+
+.left-section a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+.cart-icon {
+    font-size: 20px;
+    margin-right: 5px;
+    
+}
+
+.total-amount {
+    margin-right: 10px;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.account-login a {
+    text-decoration: none;
+    color: #ffffff;
+    margin-left: 10px;
+    font-weight: 600;
 }
